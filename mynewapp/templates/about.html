@@ -42,15 +42,15 @@ https://templatemo.com/tm-574-mexant
               <div class="col-12">
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
-                          <img src="assets/images/logo.png" alt="">
+                      <a href="{% url 'index' %}" class="logo">
+                          <img src="{% static 'assets/images/logo.png' %}" alt="">
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                          <li class="scroll-to-section"><a href="index.html">Home</a></li>
-                          <li class="scroll-to-section"><a href="index.html">Services</a></li>
-                          <li class="scroll-to-section"><a href="index.html">About</a></li>
+                          <li class="scroll-to-section"><a href="index">Home</a></li>
+                          <li class="scroll-to-section"><a href="index">Services</a></li>
+                          <li class="scroll-to-section"><a href="index">About</a></li>
                           <li class="has-sub">
                               <a href="javascript:void(0)">Pages</a>
                               <ul class="sub-menu">
@@ -266,15 +266,13 @@ https://templatemo.com/tm-574-mexant
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/swiper.js"></script>
-    <script src="assets/js/custom.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/tabs.js' %}"></script>
+  <script src="{% static 'assets/js/swiper.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
     <script>
         var interleaveOffset = 0.5;
 
