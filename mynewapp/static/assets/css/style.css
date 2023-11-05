@@ -68,12 +68,12 @@ body {
 }
 
 ::-moz-selection {
-  background-color: #46648c;
+  background-color: rgb(167, 74, 12);
   color: #ffffff;
 }
 
 ::selection {
-  background-color: #46648c;
+  background-color: #8c7346;
   color: #ffffff;
 }
 
@@ -281,7 +281,7 @@ textarea {
 }
 
 .divider-secondary {
-  background-color: #213360;
+  background-color: rgb(235, 77, 15)67, 33;
 }
 
 .divider-white {
