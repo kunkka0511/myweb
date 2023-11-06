@@ -78,7 +78,7 @@
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="index">
-            <img src="{% static 'assets/images/logo/effect.png' %}" class="logo-dark logo" alt="logo">
+           <!--<img src="{% static 'assets/images/logo/effect.png' %}" class="logo-dark logo" alt="logo">--> 
           </a>
           <button class="navbar-toggler" type="button">
             <span class="menu-lines"><span></span></span>
@@ -92,7 +92,7 @@
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Бидний тухай</a>
                 <ul class="dropdown-menu">
                   <li class="nav__item">
-                    <a href="about.html" class="nav__item-link">Түүх</a>
+                    <a href="{% url 'about' %}" class="nav__item-link">About Us</a>
                   </li>
                   <li class="nav__item">
                     <a href="services.html" class="nav__item-link">Манай үйл ажиллагаа</a>
@@ -133,7 +133,7 @@
                 </ul>
               </li> 
               <li class="nav__item">
-                <a href="contact.html" class="nav__item-link">Холбогдох</a>
+                <a href="{% url 'contact' %}" class="nav__item-link">Хаяг байршил</a>
               </li><!-- /.nav-item -->
             </ul><!-- /.navbar-nav -->
             <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
@@ -261,8 +261,8 @@
                 <i class="icon-call3"></i>
               </div>
               <div class="contact__content">
-                <h2 class="contact__title">Зөвлөмж авах </h2>
-                <p class="contact__desc">Та манай мэргэшсэн эмчтэй нартай холбогдож зөвлөгөө болон цаг авах боломжтой</p>
+                <h2 class="contact__title">btext muhuhuihgih </h2>
+                <p class="contact__desc">text nuhun</p>
                 <a href="tel:+70118883 " class="phone__number">
                   <i class="icon-phone"></i> <span>70118883</span>
                 </a>
@@ -275,10 +275,10 @@
                 <i class="icon-health-report"></i>
               </div>
               <div class="contact__content">
-                <h2 class="contact__title">Цагийн хуваарь</h2>
-                <p class="contact__desc">Та цагын хуваарийн хүснэгтэгтийг хараад цагаа захиалаарай.</p>
+                <h2 class="contact__title">jopojkpjop</h2>
+                <p class="contact__desc">jopjooo//jjjjjjjjjkll;k/k.</p>
                 <a href="doctors-timetable.html" class="btn btn__white btn__outlined btn__rounded">
-                  <span>Цагын хуваарь харах</span><i class="icon-arrow-right"></i>
+                  <span>kl;klKp;</span><i class="icon-arrow-right"></i>
                 </a>
               </div>
             </div><!-- /.contact-box -->
@@ -730,9 +730,8 @@
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
             <div class="heading text-center mb-40">
-              <h3 class="heading__title">Манай эмч нар</h3>
-              <p class="heading__desc">Манай захиргаа болон туслах ажилтнууд бүгдээрээ хүний ​​онцгой ур чадвартай
-                эрүүл мэндийн бүхий л лавлагаанд туслахаар бэлтгэгдсэн.
+              <h3 class="heading__title">Манайтай хамтрагч байгууллага</h3>
+              <p class="heading__desc"> text heregtei
               </p>
             </div><!-- /.heading -->
           </div><!-- /.col-lg-6 -->
@@ -766,11 +765,11 @@
               <!-- Member #2 -->
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static 'assets/images/team/emch.jpg' %}" alt="member img">
+                  <img src="{% static 'assets/images/team/aaa1.jpg' %}" alt="member img">
                 </div><!-- /.member-img -->
                 <div class="member__info">
-                  <h5 class="member__name"><a href="doctors-single-doctor1.html">С.Мөнхбаярлах</a></h5>
-                  <p class="member__job">АУ доктор, профессор</p>
+                  <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага</a></h5>
+                  <p class="member__job">Ene hesegt hamtragch baiguulaga</p>
                   <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                   <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
                     <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
@@ -788,11 +787,11 @@
               <!-- Member #3 -->
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static 'assets/images/team/emch1.jpg' %}" alt="member img">
+                  <img src="{% static 'assets/images/team/aa.jpg' %}" alt="member img">
                 </div><!-- /.member-img -->
                 <div class="member__info">
-                  <h5 class="member__name"><a href="doctors-single-doctor1.html">Б.Баяр-Өлзий</a></h5>
-                  <p class="member__job">АУ магистр</p>
+                  <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага</a></h5>
+                  <p class="member__job">Чиглэл</p>
                   <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                   <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
                     <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
@@ -810,11 +809,11 @@
               <!-- Member #4 -->
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static 'assets/images/team/emch1.jpg' %}" alt="member img">
+                  <img src="{% static 'assets/images/team/aaa.jpg' %}" alt="member img">
                 </div><!-- /.member-img -->
                 <div class="member__info">
-                  <h5 class="member__name"><a href="doctors-single-doctor1.html">Н.Төвшинтөр </a></h5>
-                  <p class="member__job">АУ магистр</p>
+                  <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага </a></h5>
+                  <p class="member__job">Чиглэл</p>
                   <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                   <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
                     <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
@@ -835,8 +834,8 @@
                   <img src="{% static '' %}" alt="member img">
                 </div>
                 <div class="member__info">
-                  <h5 class="member__name"><a href="doctors-single-doctor1.html">Г.Тэлмэн </a></h5>
-                  <p class="member__job">АУ магистр</p>
+                  <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага </a></h5>
+                  <p class="member__job">Чиглэл</p>
                   <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                   <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
                     <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
@@ -853,7 +852,7 @@
               </div>
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static 'assets/images/team/emch1.jpg' %}" alt="member img">
+                  <img src="{% static 'assets/images/team/aaaa.jpg' %}" alt="member img">
                 </div>
                 <div class="member__info">
                   <h5 class="member__name"><a href="doctors-single-doctor1.html">Kiano Barker</a></h5>
@@ -1137,11 +1136,11 @@
                     <div class="form-group">
                       <i class="icon-user form-group-icon"></i>
                       <select class="form-control">
-                        <option value="0">Эмч сонгох </option>
-                        <option value="1">С.Мөнхбаярлах</option>
-                        <option value="2">Б.Баяр-Өлзий</option>
-                        <option value="2">Н.Төвшинтөр</option>
-                        <option value="2">Г.Тэлмэн</option>
+                        <option value="0">байгууллага сонгох </option>
+                        <option value="1">байгууллага</option>
+                        <option value="2">байгууллага</option>
+                        <option value="2">байгууллага</option>
+                        <option value="2">байгууллага</option>
                       </select>
                     </div>
                   </div>
