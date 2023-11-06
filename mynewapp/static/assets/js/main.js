@@ -1,318 +1,162 @@
-/*--------------------------
-    Project Name: Medcity
-    Version: 1.0
-    Author: 7oorof
-    Relase Date: April 2021
----------------------------*/
-/*---------------------------
-      Table of Contents
-    --------------------
-    01- Pre Loading
-    02- Mobile Menu
-    03- Sticky Navbar
-    04- Scroll Top Button
-    05- Close Topbar
-    06- Set Background-img to section 
-    07- Add active class to accordions
-    08- Contact Form validation
-    09- Slick Carousel
-    10- Popup Video
-    11- Progress bars
-    12- NiceSelect Plugin
-    13- Range Slider
-     
- ----------------------------*/
 
-$(function () {
-
-    "use strict";
-
-    // Global variables
-    var $win = $(window);
-
-    /*==========  Pre Loading   ==========*/
-    setTimeout(function () {
-        $(".preloader").remove();
-    }, 2000);
-
-    /*==========   Mobile Menu   ==========*/
-    $('.navbar-toggler').on('click', function () {
-        $('.navbar-collapse').addClass('menu-opened');
-    })
-
-    $('.close-mobile-menu').on('click', function (e) {
-        $('.navbar-collapse').removeClass('menu-opened');
-    });
-
-    /*==========   Sticky Navbar   ==========*/
-    $win.on('scroll', function () {
-        if ($win.width() >= 992) {
-            var $stickyNavbar = $('.sticky-navbar'),
-                $secondaryNavbar = $('.secondary-nav');
-            if ($win.scrollTop() > 150) {
-                $stickyNavbar.addClass('is-sticky');
-            } else {
-                $stickyNavbar.removeClass('is-sticky');
-            }
-            if ($secondaryNavbar.length) {
-                if ($win.scrollTop() > $secondaryNavbar.offset().top - 100) {
-                    $secondaryNavbar.addClass('secondary-nav-sticky');
-                } else {
-                    $secondaryNavbar.removeClass('secondary-nav-sticky');
-                }
-            }
-        }
-    });
-    // Scroll To Section when Clicking on The Link
-    $('.secondary-nav-internal-navigation .nav__link').on("click", function (e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $('#' + $(this).data('scroll')).offset().top - 140
-        }, 1000);
-    });
-
-    // Add  active class when The Scroll Reaching the Section
-    $(window).on("scroll", function () {
-        $('section').each(function () {
-            if ($(window).scrollTop() > $(this).offset().top - 141) {
-                var sectionID = $(this).attr('id');
-                $('.secondary-nav-internal-navigation .nav__link').removeClass('active');
-                $('.secondary-nav-internal-navigation .nav__link[data-scroll="' + sectionID + '"]').addClass('active');
-            }
-        });
-    });
-
-    /*==========   Scroll Top Button   ==========*/
-    var $scrollTopBtn = $('#scrollTopBtn');
-    // Show Scroll Top Button
-    $win.on('scroll', function () {
-        if ($(this).scrollTop() > 700) {
-            $scrollTopBtn.addClass('actived');
-        } else {
-            $scrollTopBtn.removeClass('actived');
-        }
-    });
-    // Animate Body after Clicking on Scroll Top Button
-    $scrollTopBtn.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-    });
-
-    /*==========   Close Topbar   ==========*/
-    $('.topbar__close').on("click", function (e) {
-        e.preventDefault();
-        $(this).closest('.topbar').fadeOut()
-    });
-
-    /*==========   Set Background-img to section   ==========*/
-    $('.bg-img').each(function () {
-        var imgSrc = $(this).children('img').attr('src');
-        $(this).parent().css({
-            'background-image': 'url(' + imgSrc + ')',
-            'background-size': 'cover',
-            'background-position': 'center',
-        });
-        $(this).parent().addClass('bg-img');
-        if ($(this).hasClass('background-size-auto')) {
-            $(this).parent().addClass('background-size-auto');
-        }
-        $(this).remove();
-    });
-
-    /*==========   Add active class to accordions   ==========*/
-    $('.accordion__header').on('click', function () {
-        $(this).parent('.accordion-item').toggleClass('opened');
-        $(this).parent('.accordion-item').siblings().removeClass('opened');
-    })
-    $('.accordion__title').on('click', function (e) {
-        e.preventDefault()
-    });
-
-    /*==========  Open and Close Popup   ==========*/
-    // open Mini Popup
-    function openMiniPopup(popupTriggerBtn, popup, cssClass) {
-        $(popupTriggerBtn).on('click', function (e) {
-            e.preventDefault();
-            $(this).toggleClass(cssClass);
-            $(popup).toggleClass(cssClass);
-        });
+//////////////////////  CheckPage  ////////////////////////
+var CPonSuccess = function(response) {
+    var errorDivs = document.getElementsByClassName("hcaptcha-error");
+    if (errorDivs.length) {
+      errorDivs[0].className = "";
     }
-    // open Popup
-    function openPopup(popupTriggerBtn, popup, addedClass, removedClass) {
-        $(popupTriggerBtn).on('click', function (e) {
-            e.preventDefault();
-            $(popup).toggleClass(addedClass, removedClass).removeClass(removedClass);
-        });
-    }
-    // Close Popup
-    function closePopup(closeBtn, popup, addedClass, removedClass) {
-        $(closeBtn).on('click', function () {
-            $(popup).removeClass(addedClass).addClass(removedClass);
-        });
-    }
-    // close popup when clicking on an other place on the Document
-    function closePopupFromOutside(popup, stopPropogationElement, popupTriggerBtn, removedClass, addedClass) {
-        $(document).on('mouseup', function (e) {
-            if (!$(stopPropogationElement).is(e.target) && !$(popupTriggerBtn).is(e.target) && $(stopPropogationElement).has(e.target).length === 0 && $(popup).has(e.target).length === 0) {
-                $(popup).removeClass(removedClass).addClass(addedClass);
-            }
-        });
-    }
-    openMiniPopup('.miniPopup-emergency-trigger', '#miniPopup-emergency', 'active') // Open miniPopup-emergency
-    openMiniPopup('#miniPopup-departments-trigger-icon', '#miniPopup-departments', 'active') // Open miniPopup-emergency
-
-    openPopup('.action__btn-search', '.search-popup', 'active', 'inActive') // Open sidenav popup
-    closePopup('.search-popup__close', '.search-popup', 'active', 'inActive') // Close sidenav popup
-    openPopup('.action__btn-burgerMenu', '.burger-menu', 'active', 'inActive') // Open sidenav popup
-    closePopup('.burger-menu__close', '.burger-menu', 'active', 'inActive') // Close sidenav popup
-    openPopup('.action__btn-cart', '.cart-popup', 'active', 'inActive') // Open Search popup
-    closePopupFromOutside('.burger-menu', '.burger-menu__content', '.action__btn-burgerMenu', 'active', 'inActive');  // close popup when clicking on an other place on the Document
-
-    openPopup('.open-login-popup', '#login-popup', 'active', 'inActive') // Open sidenav popup
-    closePopupFromOutside('#login-popup', '.login-popup-wrapper', '.open-login-popup', 'active', 'inActive');  // close popup when clicking on an other place on the Document
-
-    openPopup('.open-register-popup', '#register-popup', 'active', 'inActive') // Open sidenav popup
-    closePopupFromOutside('#register-popup', '.login-popup-wrapper', '.open-register-popup', 'active', 'inActive');  // close popup when clicking on an other place on the Document
-
-    // Close topbar
-    $('#close-topbar').on('click', function () {
-        $('#header-topbar').fadeOut();
-    });
-
-    /*==========   Increase and Decrease Input Value   ==========*/
-    // Increase Value
-    $('.increase-qty').on('click', function () {
-        var $qty = $(this).parent().find('.qty-input');
-        var currentVal = parseInt($qty.val());
-        if (!isNaN(currentVal)) {
-            $qty.val(currentVal + 1);
-        }
-    });
-    // Decrease Value
-    $('.decrease-qty').on('click', function () {
-        var $qty = $(this).parent().find('.qty-input');
-        var currentVal = parseInt($qty.val());
-        if (!isNaN(currentVal) && currentVal > 1) {
-            $qty.val(currentVal - 1);
-        }
-    });
-
-    /*==========   Progress bars  ==========*/
-    if ($(".animated-Progressbars").length > 0) {
-        $(window).on('scroll', function () {
-            var skillsOffset = $(".animated-Progressbars").offset().top - 160,
-                skillsHight = $(this).outerHeight(),
-                winScrollTop = $(window).scrollTop();
-            if (winScrollTop > skillsOffset - 1 && winScrollTop < skillsOffset + skillsHight - 1) {
-                $('.progress-bar').each(function () {
-                    $(this).width($(this).attr('aria-valuenow') + '%');
-                });
-                $('.progress__percentage').each(function () {
-                    $(this).text($(this).parent('.progress-bar').attr('aria-valuenow') + '%')
-                });
-            }
-        });
+    var errorMsgs = document.getElementsByClassName("hcaptcha-error-message");
+    if (errorMsgs.length) {
+      errorMsgs[0].parentNode.removeChild(errorMsgs[0]);
     }
 
-    /*==========  Contact Form validation  ==========*/
-    var contactForm = $("#contactForm"),
-        contactResult = $('.contact-result');
-    contactForm.validate({
-        debug: false,
-        submitHandler: function (contactForm) {
-            $(contactResult, contactForm).html('Please Wait...');
-            $.ajax({
-                type: "POST",
-                url: "assets/php/contact.php",
-                data: $(contactForm).serialize(),
-                timeout: 20000,
-                success: function (msg) {
-                    $(contactResult, contactForm).html('<div class="alert alert-success" role="alert"><strong>Thank you. We will contact you shortly.</strong></div>').delay(3000).fadeOut(2000);
-                },
-                error: $('.thanks').show()
-            });
-            return false;
+    var logEl = document.querySelector(".hcaptcha-success");
+    logEl.innerHTML = "Challenge Success!"
+    if (logEl.innerHTML = "Challenge Success!"){
+      document.querySelector("#hcaptcha-demo-submit").disabled = false;
+    }
+    
+  };
+
+  var CPonExpire = function(response) {
+    var logEl = document.querySelector(".hcaptcha-success");
+    logEl.innerHTML = "Token expired."
+  };
+      // beacon example
+      function CPaddEventHandler(object,szEvent,cbCallback){
+        if(!!object.addEventListener){ // for modern browsers or IE9+
+            return object.addEventListener(szEvent,cbCallback);
         }
-    });
-
-    /*==========   Slick Carousel ==========*/
-    $('.slick-carousel').slick();
-
-    $('.slider-with-navs').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: false,
-        dots: true,
-        asNavFor: '.slider-nav'
-    });
-
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-with-navs',
-        dots: false,
-        arrows: false,
-        centerMode: false,
-        focusOnSelect: true,
-        infinite: false
-    });
-
-    /*==========  Popup Video  ==========*/
-    $('.popup-video').magnificPopup({
-        mainClass: 'mfp-fade',
-        removalDelay: 0,
-        preloader: false,
-        fixedContentPos: false,
-        type: 'iframe',
-        iframe: {
-            markup: '<div class="mfp-iframe-scaler">' +
-                '<div class="mfp-close"></div>' +
-                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                '</div>',
-            patterns: {
-                youtube: {
-                    index: 'youtube.com/',
-                    id: 'v=',
-                    src: '//www.youtube.com/embed/%id%?autoplay=1'
-                }
-            },
-            srcAction: 'iframe_src',
+        if(!!object.attachEvent){ // for IE <=8
+            return object.attachEvent(szEvent,cbCallback);
         }
-    });
-    $('.popup-gallery-item').magnificPopup({
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1]
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-        }
-    });
+        };
+        // Ex: triggers pageview beacon
+        CPaddEventHandler(window,'load',function(){b();});
+        // Ex: triggers event beacon without pageview
+        CPaddEventHandler(window,'load',function(){b({"vt": "e", "ec": "test_cat", "ea": "test_action"});});
+        
 
-    /*==========  NiceSelect Plugin  ==========*/
-    $('select').niceSelect();
+/////////////////  ForgetPassword  ///////////////////
 
-    /*==========   Range Slider  ==========*/
-    var $rangeSlider = $("#rangeSlider"),
-        $rangeSliderResult = $("#rangeSliderResult");
-    $rangeSlider.slider({
-        range: true,
-        min: 0,
-        max: 300,
-        values: [50, 200],
-        slide: function (event, ui) {
-            $rangeSliderResult.val("$" + ui.values[0] + " - $" + ui.values[1]);
-        }
-    });
-    $rangeSliderResult.val("$" + $rangeSlider.slider("values", 0) + " - $" + $rangeSlider.slider("values", 1));
 
-    /*==========  image zoomsl Plugin  ==========*/
-    // [Zoom Effect on Hovering] Find it in shop-single-product.html
-    $(".zoomin").imagezoomsl();
+////////////////////////  UserDashBoard  ///////////////////////
+$(".menu").click(function () {
+  $("#mySidenav").css("width", "70px");
+  $("#main").css("margin-left", "70px");
+  $(".logo").css("display", "none");
+  $(".logo1").css("display", "block");
+  $(".logo span").css("visibility", "visible");
+  $(".logo span").css("margin-left", "-10px");
+  $(".icon-a").css("visibility", "hidden");
+  $(".icon-a").css("height", "25px");
+  $(".icons").css("visibility", "visible");
+  $(".icons").css("margin-left", "-8px");
+  $(".menu1").css("display", "block");
+  $(".menu").css("display", "none");
 });
+
+$(".menu1").click(function () {
+  $("#mySidenav").css("width", "300px");
+  $("#main").css("margin-left", "300px");
+  $(".logo").css("visibility", "visible");
+  $(".logo").css("display", "block");
+  $(".icon-a").css("visibility", "visible");
+  $(".icons").css("visibility", "visible");
+  $(".menu").css("display", "block");
+  $(".menu1").css("display", "none");
+});
+
+$(document).ready(function () {
+  $(".profile p").click(function () {
+    $(".profile-div").toggle();
+  });
+});
+
+function UDBopenNav() {
+a=document.getElementById("mySidepanel");
+b=document.getElementById("huselt");
+c=document.getElementById("oyutan");
+if (a.style.width ==="150px"){
+a.style.width = "0";
+}
+else {
+a.style.width = "150px"
+b.style.width = "0"
+c.style.width = "0"
+}
+}
+function UDBcloseNav() {
+document.getElementById("mySidepanel").style.width = "0";
+}
+
+function UDBopenN() {
+a=document.getElementById("huselt");
+b=document.getElementById("mySidepanel");
+c=document.getElementById("oyutan");
+
+if (a.style.width ==="150px" ){
+a.style.width = "0";
+}
+else {
+a.style.width = "150px"
+b.style.width = "0"
+c.style.width = "0"
+}
+}
+function UDBcloseN() {
+document.getElementById("huselt").style.width = "0";
+}
+function UDBopens() {
+document.getElementById("me").style.width = "150px";
+}
+function UDBcloses() {
+document.getElementById("me").style.width = "0";
+}
+//hvselt
+
+function UDBopenN3() {
+a=document.getElementById("mySidepanel");
+b=document.getElementById("huselt");
+c=document.getElementById("oyutan");
+if (c.style.width ==="150px"){
+  c.style.width = "0";
+}
+else {
+  a.style.width = "0"
+  b.style.width = "0"
+  c.style.width = "150px"
+}
+}
+function UDBcloseN3() {
+document.getElementById("oyutan").style.width = "0";
+}
+
+    
+//////////////////////  TUserLlist  //////////////////////
+function ULmyFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  let a = document.getElementsByTagName("tr").length;
+  let i = 1;
+  let b = 0;
+  while (i < a) {
+    document.getElementsByClassName("asd")[b].innerHTML = i;
+    b += 1;
+    i += 1;
+  }

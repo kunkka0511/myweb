@@ -14,6 +14,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/48159919ac/IcoMoonApp1/style.css">
   <link rel="stylesheet" href="{% static 'assets/css/libraries.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
@@ -104,7 +105,7 @@
                     <a href="pricing.html" class="nav__item-link">Pricing & Plans</a>
                   </li>
                   <li class="nav__item">
-                    <a href="appointment.html" class="nav__item-link">Appointments</a>
+                    <a href="{% url 'appointment' %}" class="nav__item-link">Appointments</a>
                   </li>
                   <li class="nav__item">
                     <a href="faqs.html" class="nav__item-link">Help & FAQs</a>
@@ -116,19 +117,19 @@
               </li>
               
               <li class="nav__item">
-                <a href="index" class="nav__item-link">Зөвлөмж</a>
+                <a href="{% url 'aimag' %}" class="nav__item-link">Зөвлөмж</a>
               </li>
              <li class="nav__item has-dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Shop</a>
                 <ul class="dropdown-menu">
                   <li class="nav__item">
-                    <a href="shop.html" class="nav__item-link">Our Products</a>
+                    <a href="shop" class="nav__item-link">Our Products</a>
                   </li>
                   <li class="nav__item">
-                    <a href="shop-single-product.html" class="nav__item-link">Products Single</a>
+                    <a href="shopsingel" class="nav__item-link">Products Single</a>
                   </li>
                   <li class="nav__item">
-                    <a href="cart.html" class="nav__item-link">Cart</a>
+                    <a href="cart" class="nav__item-link">Cart</a>
                   </li>
                 </ul>
               </li> 
@@ -146,9 +147,9 @@
 {% block department-single %}
 {% endblock department-single %}
              <!-- /.miniPopup-departments -->
-            <a href="appointment.html" class="btn btn__primary btn__rounded ml-30">
+             <a href="{% url 'appointment' %}" class="btn btn__primary btn__rounded mr-30">
               <i class="icon-calendar"></i>
-              <span>Цаг авах</span>
+              <span>Монгол хаяг</span>
             </a>
           </d>
         </div><!-- /.container -->
@@ -167,36 +168,20 @@
             <div class="row align-items-center">
               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
                 <div class="slide__content">
-                  <h2 class="slide__title">Бидний давуу тал
+                  <h2 class="slide__title">Монгол хаяг
                   </h2>
                   <p class="slide__desc">Монгол улсын нутаг дэвсгэрт үйл ажиллагаа явуулж буй байгууллага, аж ахуйн нэгжийн хаяг байршлын мэдээллийн нэгдсэн сан</p>
                   <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
-                    <!-- feature item #1 -->
-                   <!-- <li class="feature-item">
-                      <div class="feature__icon">
-                        <i class="icon-heart"></i>
-                      </div> 
-                      <h2 class="feature__title">Сорил</h2> 
-                    </li> -->
-                   <!-- <li class="feature-item">
-                      <div class="feature__icon">
-                        <i class="icon-medicine"></i>
-                      </div>
-                      <h2 class="feature__title">Эмийн жор  </h2>
-                    </li>--><!-- /.feature-item-->
-                    <!-- feature item #3 -->
-                   <!-- <li class="feature-item">
-                      <div class="feature__icon">
-                        <i class="icon-heart2"></i>
-                      </div>
-                       <h2 class="feature__title">Cardiogram</h2>
-                    </li> -->
-                 
-                    <!-- <li class="feature-item">
-                      <div class="feature__icon">
-                        <i class="icon-blood-test"></i>
-                      </div> -->
-                      <!--<h2 class="feature__title">Цусны даралт</h2> -->
+                    <div class="d-flex flex-wrap align-items-center">
+                    <a href="{% url 'appointment' %}" class="btn btn__primary btn__rounded mr-30">
+                      <span>Хаяг байршил</span>
+                      <i class="icon-arrow-right"></i>
+                    </a>
+                    <a href="{% url 'services' %}" class="btn btn__white btn__rounded">
+                      <span>Үйл ажиллагааны Чиглэл</span>
+                      <i class="icon-arrow-right"></i>
+                    </a>
+                  </div>
                     </li><!-- /.feature-item-->
                   </ul><!-- /.features-list -->
                 </div>  <!-- /.slide-content -->
@@ -371,7 +356,7 @@
           <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
             <div class="heading text-center mb-60">
               <h2 class="heading__subtitle">The Best Medical And General Practice Care!</h2>
-              <h3 class="heading__title">Улаанбаатар хот үйл ажиллагааны салбарууд</h3>
+              <h3 class="heading__title">Улаанбаатар хот бүх дүүрэг</h3>
             </div>
           </div>
         </div>
@@ -381,12 +366,12 @@
               data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "autoplay": true, "arrows": false, "dots": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
          
               <div class="service-item">
-                <div class="service__icon">
-                  <i class="icon-head"></i>
-                  <i class="icon-head"></i>
-                </div>
+               <!-- <div class="service__icon">
+                  <i class="icon-heart3"></i>
+                  <i class="icon-heart3"></i>
+                </div> --> 
                 <div class="service__content">
-                  <h4 class="service__title">Neurology Clinic</h4>
+                  <h4 class="service__title">Сүхбаатар дүүрэг</h4>
                   <p class="service__desc">Some neurologists receive subspecialty training focusing on a particular area
                     of
                     the fields, these training programs are called fellowships, and are one to two years.
@@ -396,18 +381,18 @@
                     <li>Neuro Oncology</li>
                     <li>Geriatric Neurology</li>
                   </ul>
-                  <a href="services-single.html" class="btn btn__secondary btn__outlined btn__rounded">
-                    <span>Унших</span>
+                  <a href="{% url 'service1'%}" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Дэлгэрэнгүй </span>
                     <i class="icon-arrow-right"></i>
                   </a>
                 </div>
               </div>
              
               <div class="service-item">
-                <div class="service__icon">
-                  <i class="icon-heart"></i>
-                  <i class="icon-heart"></i>
-                </div>
+                <!-- <div class="service__icon">
+                  <i class="icon-heart3"></i>
+                  <i class="icon-heart3"></i>
+                </div> --> 
                 <div class="service__content">
                   <h4 class="service__title">Cardiology Clinic</h4>
                   <p class="service__desc">All cardiologists study the disorders of the heart, but the study of adult
@@ -419,18 +404,18 @@
                     <li>Neuro Oncology</li>
                     <li>Geriatric Neurology</li>
                   </ul>
-                  <a href="services-single.html" class="btn btn__secondary btn__outlined btn__rounded">
-                    <span>Унших</span>
+                  <a href="service1.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Дэлгэрэнгүй </span>
                     <i class="icon-arrow-right"></i>
                   </a>
                 </div>
               </div>
             
               <div class="service-item">
-                <div class="service__icon">
-                  <i class="icon-microscope"></i>
-                  <i class="icon-microscope"></i>
-                </div>
+                <!-- <div class="service__icon">
+                  <i class="icon-heart3"></i>
+                  <i class="icon-heart3"></i>
+                </div> --> 
                 <div class="service__content">
                   <h4 class="service__title">Pathology Clinic</h4>
                   <p class="service__desc">Pathology is the study of disease, it is the bridge between science and
@@ -442,17 +427,17 @@
                     <li>Histopathology</li>
                     <li>Cytopathology </li>
                   </ul>
-                  <a href="services-single.html" class="btn btn__secondary btn__outlined btn__rounded">
-                    <span>Унших</span>
+                  <a href="service1.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Дэлгэрэнгүй </span>
                     <i class="icon-arrow-right"></i>
                   </a>
                 </div>
               </div>
               <div class="service-item">
-                <div class="service__icon">
-                  <i class="icon-dropper"></i>
-                  <i class="icon-dropper"></i>
-                </div>
+              <!-- <div class="service__icon">
+                  <i class="icon-city"></i>
+                  <i class="icon-city"></i>
+                </div> --> 
                 <div class="service__content">
                   <h4 class="service__title">Laboratory Analysis</h4>
                   <p class="service__desc">Analyzing the radon or radon progeny concentrations with passive devices, or
@@ -471,10 +456,10 @@
                 </div>
               </div>
               <div class="service-item">
-                <div class="service__icon">
+                <!-- <div class="service__icon">
                   <i class="icon-heart3"></i>
                   <i class="icon-heart3"></i>
-                </div>
+                </div> --> 
                 <div class="service__content">
                   <h4 class="service__title">Pediatric Clinic</h4>
                   <p class="service__desc">Pediatric providers see patients from birth into early adulthood to make sure
@@ -493,10 +478,10 @@
               </div>
             
               <div class="service-item">
-                <div class="service__icon">
-                  <i class="icon-heart2"></i>
-                  <i class="icon-heart2"></i>
-                </div>
+                <!-- <div class="service__icon">
+                  <i class="icon-heart3"></i>
+                  <i class="icon-heart3"></i>
+                </div> --> 
                 <div class="service__content">
                   <h4 class="service__title">Cardiac Clinic</h4>
                   <p class="service__desc">For people requiring additional follow up, the Cardiac Clinic provides rapid
@@ -1117,9 +1102,9 @@
               <form class="contact-panel__form" method="post" action="assets/php/contact.php" id="contactForm">
                 <div class="row">
                   <div class="col-sm-12">
-                    <h4 class="contact-panel__title">Цаг захиалах</h4>
-                    <p class="contact-panel__desc mb-30">Манай найрсаг хүлээн авалтын ажилтнуудтай холбоо барина уу
-                      аливаа ерөнхий болон эмнэлгийн лавлагаатай. Манай эмч нар яаралтай дуудлагыг хүлээн авах эсвэл хариу өгөх болно.
+                    <h4 class="contact-panel__title">бүртэгүүлэх</h4>
+                    <p class="contact-panel__desc mb-30">Төрийн цогц мэдээллийн сан
+                      “Монгол хаяг” вэб сайт нь УБ хотын 9 дүүргийн 152 хороо, 21 аймгийн 330 сумдад үйл ажиллагаа явуулж буй төрийн  байгууллага засаг захиргааны төвүүд,  эмнэлэг, сургууль, төрийн үйлчилгээний   нэгжүүдийн хаяг байршил, мэдээллийг нэгтгэн байршуулсан. 
                     </p>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-6">
@@ -1189,7 +1174,8 @@
           </div>
           <div class="col-sm-12 col-md-12 col-lg-5">
             <div class="heading heading-light mb-30">
-              <h3 class="heading__title mb-30">Дэлхийн өнцөг булан бүрээс ирсэн өвчтөнүүдэд тусалж байна!!</h3>
+              <h3 class="heading__title mb-30">
+                </h3>
               <p class="heading__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               </p>
             </div>
