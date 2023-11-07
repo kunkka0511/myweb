@@ -22,3 +22,5 @@ def aimag(request):
     return render(request, 'aimag.html')
 def appointment(request):
     return render(request, 'appointment.html')
+def blog(request):
+    return render(request, 'blog.html')

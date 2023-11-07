@@ -6344,73 +6344,44 @@ input[type=radio] {
 /*----------------------------
     Contact
 ----------------------------*/
-.contact-info .boxes-wrapper {
+.list-topics-content {
   position: relative;
-  z-index: 3;
-  margin-top: -40px;
-  overflow: hidden;
-  border-radius: 10px;
+  top: -98px;
+  z-index: 1;
+}
+.list-topics-content ul li { display: inline-block;}
+
+.single-list-topics-content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 205px;
+  height: 170px;
+  background:#fff;
+  border-radius: 3px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0px 10px rgba(71,71,71,.2);
+  -webkit-transition: .3s linear; 
+  -moz-transition:.3s linear; 
+  -ms-transition:.3s linear; 
+  -o-transition:.3s linear;
+  transition: .3s linear;
+}
+.single-list-topics-content h2>a { margin: 13px 0;}
+/*.single-list-topics-content:last-child{margin-right: 0;}*/
+
+.single-list-topics-icon [class^="flaticon-"]:before,.single-list-topics-icon [class*=" flaticon-"]:before,.single-list-topics-icon [class^="flaticon-"]:after,.single-list-topics-icon [class*=" flaticon-"]:after {font-size: 45px;color:#343a3f;}
+.single-list-topics-content:hover .single-list-topics-icon [class^="flaticon-"]:before,.single-list-topics-content:hover .single-list-topics-icon [class*=" flaticon-"]:before,.single-list-topics-content:hover .single-list-topics-icon [class^="flaticon-"]:after,.single-list-topics-content:hover .single-list-topics-icon [class*=" flaticon-"]:after {color:#fff;}
+
+.single-list-topics-content:hover h2>a,.single-list-topics-content:hover p{color: #fff!important;}
+.single-list-topics-content:hover{
+  color: #fff;
+  background:#ff545a;
+  box-shadow: 0 5px 10px rgba(71,71,71,.4);
 }
 
-.contact-info .boxes-wrapper > [class*="col-"]:nth-of-type(1) .contact-box {
-  background-color: #46648c;
-}
-
-.contact-info .boxes-wrapper > [class*="col-"]:nth-of-type(2) .contact-box {
-  background-color: #3851a2;
-}
-
-.contact-info .boxes-wrapper > [class*="col-"]:nth-of-type(3) .contact-box {
-  background-color: #2d4990;
-}
-
-.contact-info .contact-box {
-  position: relative;
-  padding: 45px;
-  height: 100%;
-}
-
-.contact-info .contact-box .contact__title {
-  font-size: 19px;
-}
-
-.contact-info .contact-box .contact__icon {
-  font-size: 50px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 80px;
-          flex: 0 0 80px;
-  max-width: 80px;
-}
-
-.contact-info .contact-box .contact__title,
-.contact-info .contact-box .contact__icon,
-.contact-info .contact-box .time__list li,
-.contact-info .contact-box .contact__desc {
-  color: #ffffff;
-}
-
-.contact-info .contact-box .phone__number {
-  font-size: 23px;
-  margin-top: 5px;
-  font-weight: 600;
-  color: #ffffff !important;
-}
-
-.contact-info .contact-box .phone__number .icon-phone {
-  font-size: 17px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  margin-right: 10px;
-  background-color: #1ebaae;
-}
-
-.contact-info .contact-box .btn__white.btn__outlined {
-  height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
 
 .contact-panel {
   position: relative;
@@ -8370,8 +8341,9 @@ textarea.form-control {
   height: 50px;
   border: 0;
   outline: 0;
-  -moz-appearance: textfield;
+  appearance: textfield; /* Standard 'appearance' property */
 }
+
 
 .quantity__input-wrap .qty-input::-webkit-inner-spin-button,
 .quantity__input-wrap .qty-input::-webkit-outer-spin-button {

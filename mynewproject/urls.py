@@ -9,5 +9,6 @@ urlpatterns = [
     path('service1/', views.service1, name='service1'),
     path('aimag/', views.aimag, name='aimag'),
     path('appointment/', views.appointment, name='appointment'),
+    path('blog/', views.blog, name='blog'),
     # Other URL patterns
 ]
