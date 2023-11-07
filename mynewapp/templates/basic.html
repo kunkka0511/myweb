@@ -6,43 +6,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Эффект эмнэлэг">
+  <meta name="description" content="Монгол хаяг">
   <link href="assets/images/favicon/favicon.png" rel="icon">
   <title>
    {% block title %}{% endblock title %}
   </title>
-
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
   <link rel="stylesheet" href="https://i.icomoon.io/public/48159919ac/IcoMoonApp1/style.css">
   <link rel="stylesheet" href="{% static 'assets/css/libraries.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
-        <!--linear icon css-->
-	<link rel="stylesheet" href="{% static 'assets/css/linearicons.css' %}">
-
-		<!--animate.css-->
-        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
-
-		<!--flaticon.css-->
-        <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
-
-		<!--slick.css-->
-        <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
-		<link rel="stylesheet" href="{% static 'assets/css/slick-theme.css' %}">
-		
-        <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
-		
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="{% static 'assets/css/bootsnav.css' %}" >	
-        
-        <!--style.css-->
-        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
+  
+  <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+  
+  <link rel="stylesheet" href="{% static 'assets/css/heading.css' %}">
 {% block stylecss %} {% endblock stylecss %}
 </head>
 
@@ -68,25 +49,14 @@
                       <div class="emergency__icon">
                         <i class="icon-call3"></i>
                       </div>
-                      <a href="tel:+201061245741" class="phone__number">
-                        <i class="icon-phone"></i> <span>+2 01061245741</span>
-                      </a>
-                      <p>Please feel free to contact our friendly reception staff with any general or medical enquiry.
-                      </p>
+                    
+      
                       <a href="appointment.html" class="btn btn__secondary btn__link btn__block">
                         <span>Make Appointment</span> <i class="icon-arrow-right"></i>
                       </a>
                     </div><!-- /.miniPopup-emergency -->
                   </li>
-                  <li>
-                    <i class="icon-phone"></i><a href="tel:+70118883">(976) 70118883</a>
-                  </li>
-                  <li>
-                    <i class="icon-location"></i><a href="#">БГД, 10-р хороо, Энхтайвны өргөн чөлөө</a>
-                  </li>
-                  <li>
-                    <i class="icon-clock"></i><a href="contact.html">Даваа-Баасан: 9:00  - 17:00 </a>
-                  </li>
+                  
                 </ul><!-- /.contact__list -->
                 <div class="d-flex">
                   <ul class="social-icons list-unstyled mb-0 mr-30">
@@ -220,7 +190,7 @@
             <div class="row align-items-center">
               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
                 <div class="slide__content">
-                  <h3 class="slide__title">Хаяг байршлыг  хамгийн хурднаар</h3>
+                  <h4 class="slide__title">Хаяг байршлыг  хамгийн хурднаар</h4>
                   <p class="slide__desc">Монгол улсын нутаг дэвсгэрт үйл ажиллагаа явуулж буй байгууллага, аж ахуйн нэгжийн хаяг байршлын мэдээллийн нэгдсэн сан</p>
                   <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
                     <!-- feature item #1 -->
@@ -263,15 +233,15 @@
         contact info
     ============================== -->
     <section id="list-topics" class="list-topics">
-			<div class="container">
-				<div class="list-topics-content">
+			<div class="container-fluid">
+            <div class="col-12">
 					<ul>
 						<li>
 							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
 									<i class="flaticon-restaurant"></i>
 								</div>
-								<h2><a href="#">resturent</a></h2>
+								<h4><a href="#">resturent</a></h4>
 								<p>150 listings</p>
 							</div>
 						</li>
@@ -280,7 +250,7 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-travel"></i>
 								</div>
-								<h2><a href="#">destination</a></h2>
+								<h4><a href="#">destination</a></h4>
 								<p>214 listings</p>
 							</div>
 						</li>
@@ -289,7 +259,7 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-building"></i>
 								</div>
-								<h2><a href="#">hotels</a></h2>
+								<h4><a href="#">hotels</a></h4>
 								<p>185 listings</p>
 							</div>
 						</li>
@@ -298,7 +268,7 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-pills"></i>
 								</div>
-								<h2><a href="#">healthcaree</a></h2>
+								<h4><a href="#">healthcaree</a></h4>
 								<p>200 listings</p>
 							</div>
 						</li>
@@ -307,14 +277,14 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-transport"></i>
 								</div>
-								<h2><a href="#">automotion</a></h2>
+								<h4><a href="#">automotion</a></h4>
 								<p>120 listings</p>
 							</div>
 						</li>
 					</ul>
 				</div>
-			</div><!--/.container-->
-
+			</div>
+      <!--/.container-->
 		</section>
     <!-- <section class="about-layout2 pb-0">
       <div class="container">
@@ -1314,9 +1284,8 @@
 {% block scripts %} {% endblock scripts %}
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-		<script src="{% static 'assets/js/bootstrap.min.js' %}}"></script>     
-    <script  src="{% static 'assets/js/feather.min.js' %}"></script> 
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>    
+    <script src="{% static 'assets/js/feather.min.js' %}"></script> 
 		<script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
 		<script src="{% static 'assets/js/waypoints.min.js' %}"></script>
     <script src="{% static 'assets/js/jquery-3.5.1.min.js' %}"></script>
