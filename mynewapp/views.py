@@ -24,3 +24,5 @@ def appointment(request):
     return render(request, 'appointment.html')
 def blog(request):
     return render(request, 'blog.html')
+def shop(request):
+    return render(request, 'shop.html')

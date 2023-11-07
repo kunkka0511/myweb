@@ -10,5 +10,6 @@ urlpatterns = [
     path('aimag/', views.aimag, name='aimag'),
     path('appointment/', views.appointment, name='appointment'),
     path('blog/', views.blog, name='blog'),
+    path('shop', views.shop, name='shop'),
     # Other URL patterns
 ]

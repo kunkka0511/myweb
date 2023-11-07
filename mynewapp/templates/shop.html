@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +13,8 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-  <link rel="stylesheet" href="assets/css/libraries.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="{% static 'assets/css/libraries.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 
 <body>
@@ -85,102 +86,55 @@
           </button>
           <div class="collapse navbar-collapse" id="mainNavigation">
             <ul class="navbar-nav ml-auto">
+              <li class="nav__item">
+                <a href="index" class="nav__item-link">Home</a>
+              </li>
               <li class="nav__item has-dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Home</a>
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Бидний тухай</a>
                 <ul class="dropdown-menu">
                   <li class="nav__item">
-                    <a href="index.html" class="nav__item-link">Home Main</a>
-                  </li><!-- /.nav-item -->
+                    <a href="{% url 'about' %}" class="nav__item-link">About Us</a>
+                  </li>
                   <li class="nav__item">
-                    <a href="home-modern.html" class="nav__item-link">Home Modern</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="home-classic.html" class="nav__item-link">Home Classic</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="home-dentist.html" class="nav__item-link">Home Dentist</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="home-pharmacy.html" class="nav__item-link">Home pharmacy</a>
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item has-dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">About Us</a>
-                <ul class="dropdown-menu">
-                  <li class="nav__item">
-                    <a href="about-us.html" class="nav__item-link">About Us</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="services.html" class="nav__item-link">Our Services</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
+                    <a href="services.html" class="nav__item-link">Манай үйл ажиллагаа</a>
+                  </li>
+                   <li class="nav__item">
                     <a href="services-single.html" class="nav__item-link">single Services</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
+                  </li> 
+                   <li class="nav__item">
                     <a href="pricing.html" class="nav__item-link">Pricing & Plans</a>
-                  </li><!-- /.nav-item -->
+                  </li>
                   <li class="nav__item">
-                    <a href="appointment.html" class="nav__item-link">Appointments</a>
-                  </li><!-- /.nav-item -->
+                    <a href="{% url 'appointment' %}" class="nav__item-link">Appointments</a>
+                  </li>
                   <li class="nav__item">
                     <a href="faqs.html" class="nav__item-link">Help & FAQs</a>
-                  </li> <!-- /.nav-item -->
+                  </li> 
                   <li class="nav__item">
                     <a href="gallery.html" class="nav__item-link">Our Gallery</a>
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item has-dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Doctors</a>
-                <ul class="dropdown-menu">
-                  <li class="nav__item">
-                    <a href="doctors-timetable.html" class="nav__item-link">Doctors Timetable</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="doctors-standard.html" class="nav__item-link">Our Doctors Standard</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="doctors-modern.html" class="nav__item-link">Our Doctors Modern</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="doctors-grid.html" class="nav__item-link">Our Doctors Grid</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="doctors-single-doctor1.html" class="nav__item-link">Single Doctor 01</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="doctors-single-doctor2.html" class="nav__item-link">Single Doctor 02</a>
-                  </li> <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item has-dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Blog</a>
-                <ul class="dropdown-menu">
-                  <li class="nav__item">
-                    <a href="blog.html" class="nav__item-link">Blog Grid</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="blog-single-post.html" class="nav__item-link">Single Blog Post</a>
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item has-dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link active">Shop</a>
-                <ul class="dropdown-menu">
-                  <li class="nav__item">
-                    <a href="shop.html" class="nav__item-link">Our Products</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="shop-single-product.html" class="nav__item-link">Products Single</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="cart.html" class="nav__item-link">Cart</a>
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
+                  </li> 
+                </ul>
+              </li>
+              
               <li class="nav__item">
-                <a href="contact-us.html" class="nav__item-link">Contacts</a>
+                <a href="{% url 'aimag' %}" class="nav__item-link">Зөвлөмж</a>
+              </li>
+             <li class="nav__item has-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Shop</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="shop" class="nav__item-link">Our Products</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="shopsingel" class="nav__item-link">Products Single</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="cart" class="nav__item-link">Cart</a>
+                  </li>
+                </ul>
+              </li> 
+              <li class="nav__item">
+                <a href="{% url 'contact' %}" class="nav__item-link">Хаяг байршил</a>
               </li><!-- /.nav-item -->
             </ul><!-- /.navbar-nav -->
             <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
@@ -227,11 +181,11 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 class="pagetitle__heading">Our Products</h1>
+            <h1 class="pagetitle__heading">Улаанбаатар хотын дүүрэгүүд</h1>
             <nav>
               <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">shop</li>
+                <li class="breadcrumb-item"><a href="index.html">Нүүр</a></li>
+                <li class="breadcrumb-item active" aria-current="page">үйл ажиллагаа</li>
               </ol>
             </nav>
           </div><!-- /.col-xl-6 -->
@@ -260,16 +214,16 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="assets/images/products/1.jpg" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
-                        <i class="icon-cart"></i> <span>Add To Cart</span>
+                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Calming Herps</a></h4>
-                    <span class="product__price">$18.99</span>
+                    <h4 class="product__title"><a href="#">Сүхбаатар</a></h4>
+                    <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
               </div><!-- /.col-lg-4 -->
@@ -277,16 +231,16 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="assets/images/products/2.jpg" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
-                        <i class="icon-cart"></i> <span>Add To Cart</span>
+                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Biotin Complex</a></h4>
-                    <span class="product__price">$12,99</span>
+                    <h4 class="product__title"><a href="#">Сонгинохайрхан</a></h4>
+                    <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
               </div><!-- /.col-lg-4 -->
@@ -294,16 +248,16 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="assets/images/products/3.jpg" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
-                        <i class="icon-cart"></i> <span>Add To Cart</span>
+                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Facial Serum</a></h4>
-                    <span class="product__price">$19,99</span>
+                    <h4 class="product__title"><a href="#">Хан уул</a></h4>
+                    <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
               </div><!-- /.col-lg-4 -->
@@ -311,16 +265,16 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="assets/images/products/4.jpg" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
-                        <i class="icon-cart"></i> <span>Add To Cart</span>
+                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Calming Herps</a></h4>
-                    <span class="product__price">$33.00</span>
+                    <h4 class="product__title"><a href="#">Баянгол</a></h4>
+                    <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
               </div><!-- /.col-lg-4 -->
@@ -328,16 +282,16 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="assets/images/products/5.jpg" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
-                        <i class="icon-cart"></i> <span>Add To Cart</span>
+                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Essential Oil</a></h4>
-                    <span class="product__price">$63.00</span>
+                    <h4 class="product__title"><a href="#">Баянзүрх</a></h4>
+                    <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
               </div><!-- /.col-lg-4 -->
@@ -345,16 +299,16 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="assets/images/products/6.jpg" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
-                        <i class="icon-cart"></i> <span>Add To Cart</span>
+                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Natural Cacao Powder</a></h4>
-                    <span class="product__price">$12,99</span>
+                    <h4 class="product__title"><a href="#">Налайх</a></h4>
+                    <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
               </div><!-- /.col-lg-4 -->
@@ -362,16 +316,16 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="assets/images/products/7.jpg" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
-                        <i class="icon-cart"></i> <span>Add To Cart</span>
+                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Natural Gel</a></h4>
-                    <span class="product__price">$38,00</span>
+                    <h4 class="product__title"><a href="#">Чингэлтэй</a></h4>
+                    <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
               </div><!-- /.col-lg-4 -->
@@ -379,16 +333,16 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="assets/images/products/8.jpg" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
-                        <i class="icon-cart"></i> <span>Add To Cart</span>
+                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Goji Powder</a></h4>
-                    <span class="product__price">$16,00</span>
+                    <h4 class="product__title"><a href="#">Багануур</a></h4>
+                    <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
               </div><!-- /.col-lg-4 -->
@@ -396,16 +350,16 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="assets/images/products/9.jpg" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
-                        <i class="icon-cart"></i> <span>Add To Cart</span>
+                        <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Blood Pressure</a></h4>
-                    <span class="product__price">$18.99</span>
+                    <h4 class="product__title"><a href="#">Багахангай</a></h4>
+                    <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
               </div><!-- /.col-lg-4 -->
@@ -434,7 +388,7 @@
                 </div><!-- /.widget-content -->
               </div><!-- /.widget-search -->
               <div class="widget widget-poducts">
-                <h5 class="widget__title">Best Sellers</h5>
+                <h5 class="widget__title">Томоохон салбарууд</h5>
                 <div class="widget__content">
                   <!-- product item #1 -->
                   <div class="widget-product-item d-flex align-items-center">
@@ -442,8 +396,8 @@
                       <a href="#"><img src="assets/images/products/11.jpg" alt="Product" loading="lazy"></a>
                     </div><!-- /.product-product-img -->
                     <div class="widget-product__content">
-                      <h5 class="widget-product__title"><a href="#">Calming Herps</a></h5>
-                      <span class="widget-product__price">$ 38.00</span>
+                      <h5 class="widget-product__title"><a href="#">GOBI</a></h5>
+                      <span class="widget-product__price">cashmere</span>
                     </div><!-- /.widget-product-content -->
                   </div><!-- /.widget-product-item -->
                   <!-- product item #2 -->
@@ -452,8 +406,8 @@
                       <a href="#"><img src="assets/images/products/10.jpg" alt="Product" loading="lazy"></a>
                     </div><!-- /.product-product-img -->
                     <div class="widget-product__content">
-                      <h5 class="widget-product__title"><a href="#">Goji Powder</a></h5>
-                      <span class="widget-product__price">$ 33.00</span>
+                      <h5 class="widget-product__title"><a href="#">Nomin</a></h5>
+                      <span class="widget-product__price">holding</span>
                     </div><!-- /.widget-product-content -->
                   </div><!-- /.widget-product-item -->
                   <!-- product item #3 -->
@@ -462,14 +416,14 @@
                       <a href="#"><img src="assets/images/products/12.jpg" alt="Product" loading="lazy"></a>
                     </div><!-- /.product-product-img -->
                     <div class="widget-product__content">
-                      <h5 class="widget-product__title"><a href="#">Biotin Complex</a></h5>
-                      <span class="widget-product__price">$ 18.00</span>
+                      <h5 class="widget-product__title"><a href="#">Apu</a></h5>
+                      <span class="widget-product__price">trade</span>
                     </div><!-- /.widget-product-content -->
                   </div><!-- /.widget-product-item -->
                 </div><!-- /.widget-content -->
               </div><!-- /.widget-poducts -->
               <div class="widget widget-categories">
-                <h5 class="widget__title">Categories</h5>
+                <h5 class="widget__title"></h5>
                 <div class="widget-content">
                   <ul class="list-unstyled mb-0">
                     <li><a href="#"><span class="cat-count">4</span><span>Neurology</span></a></li>
@@ -610,9 +564,9 @@
     <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
   </div><!-- /.wrapper -->
 
-  <script src="assets/js/jquery-3.5.1.min.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'assets/js/jquery-3.5.1.min.js' %}"></script>
+  <script src="{% static 'assets/js/plugins.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 
 </html>
