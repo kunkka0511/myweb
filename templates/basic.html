@@ -163,11 +163,11 @@
                   <p class="slide__desc">Монгол улсын нутаг дэвсгэрт үйл ажиллагаа явуулж буй байгууллага, аж ахуйн нэгжийн хаяг байршлын мэдээллийн нэгдсэн сан</p>
                   <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
                     <div class="d-flex flex-wrap align-items-center">
-                    <a href="{% url 'contact' %}" class="btn btn__primary btn__rounded mr-30">
+                    <a href="{% url 'shop' %}" class="btn btn__primary btn__rounded mr-30">
                       <span>Хаяг байршил</span>
                       <i class="icon-arrow-right"></i>
                     </a>
-                    <a href="{% url 'shop' %}" class="btn btn__white btn__rounded">
+                    <a href="{% url 'contact' %}" class="btn btn__white btn__rounded">
                       <span>Үйл ажиллагааны Чиглэл</span>
                       <i class="icon-arrow-right"></i>
                     </a>
@@ -192,18 +192,18 @@
               <div class="welcome-hero-serch-box">
                 <div class="welcome-hero-form">
                   <div class="single-welcome-hero-form">
-                    <h4>what?</h4>
+                    
                     <form action="index.html">
-                      <input type="text" placeholder="Ex: palce, resturent, food, automobile" />
+                      <input type="text" placeholder="базаас орж ирэх мэдээлэл байна" />
                     </form>
                     <div class="welcome-hero-form-icon">
                       <i class="flaticon-list-with-dots"></i>
                     </div>
                   </div>
                   <div class="single-welcome-hero-form">
-                    <h4>location</h4>
+                    
                     <form action="index.html">
-                      <input type="text" placeholder="Ex: london, newyork, rome" />
+                      <input type="text" placeholder="базаас орж ирэх мэдээлэл байна" />
                     </form>
                     <div class="welcome-hero-form-icon">
                       <i class="flaticon-gps-fixed-indicator"></i>
@@ -231,7 +231,7 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-restaurant"></i>
 								</div>
-								<h4><a href="{% url 'blog' %}">resturent</a></h4>
+								<h5><a href="{% url 'blog' %}">Боловсрол</a></h5>
 								<p>150 listings</p>
 							</div>
 						</li>
@@ -240,7 +240,7 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-travel"></i>
 								</div>
-								<h4><a href="{% url 'blog'%}">destination</a></h4>
+								<h5><a href="{% url 'blog'%}">Аялал</a></h5>
 								<p>214 listings</p>
 							</div>
 						</li>
@@ -249,7 +249,7 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-building"></i>
 								</div>
-								<h4><a href="{% url 'blog'%}">hotels</a></h4>
+								<h5><a href="{% url 'blog'%}">Төр</a></h5>
 								<p>185 listings</p>
 							</div>
 						</li>
@@ -258,7 +258,7 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-pills"></i>
 								</div>
-								<h4><a href="{% url 'blog'%}">healthcaree</a></h4>
+								<h5><a href="{% url 'blog'%}">Эрүүл мэнд</a></h5>
 								<p>200 listings</p>
 							</div>
 						</li>
@@ -267,7 +267,7 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-transport"></i>
 								</div>
-								<h4><a href="#">automotion</a></h4>
+								<h5><a href="{% url 'blog'%}">Нийтийн</a></h5>
 								<p>120 listings</p>
 							</div>
 						</li>
@@ -578,10 +578,10 @@
               <!-- Member #1 -->
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static 'assets/images/sliders/ub1.jpeg' %}" alt="member img">
+                  <img src="{% static 'assets/images/tuvnom.jpg' %}" alt="member img">
                 </div><!-- /.member-img -->
                 <div class="member__info">
-                  <h5 class="member__name"><a href="doctors-single-doctor1.html">Mike Dooley</a></h5>
+                  <h5 class="member__name"><a href="doctors-single-doctor1.html">Төв номын сан</a></h5>
                   <p class="member__job">Cardiology Specialist</p>
                   <p class="member__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                   <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
@@ -600,7 +600,7 @@
               <!-- Member #2 -->
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static 'assets/images/team/aaa1.jpg' %}" alt="member img">
+                  <img src="{% static 'assets/images/barilaga.png' %}" alt="member img">
                 </div><!-- /.member-img -->
                 <div class="member__info">
                   <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага</a></h5>
@@ -622,7 +622,7 @@
               <!-- Member #3 -->
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static 'assets/images/team/aa.jpg' %}" alt="member img">
+                  <img src="{% static 'assets/images/barilaga.png' %}" alt="member img">
                 </div><!-- /.member-img -->
                 <div class="member__info">
                   <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага</a></h5>
@@ -644,7 +644,7 @@
               <!-- Member #4 -->
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static 'assets/images/team/aaa.jpg' %}" alt="member img">
+                  <img src="{% static 'assets/images/barilaga.png' %}" alt="member img">
                 </div><!-- /.member-img -->
                 <div class="member__info">
                   <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага </a></h5>
@@ -666,7 +666,7 @@
               <!-- Member #5 -->
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static '' %}" alt="member img">
+                  <img src="{% static 'assets/images/tuvnom.jpg' %}" alt="member img">
                 </div>
                 <div class="member__info">
                   <h5 class="member__name"><a href="doctors-single-doctor1.html">байгууллага </a></h5>
@@ -687,7 +687,7 @@
               </div>
               <div class="member">
                 <div class="member__img">
-                  <img src="{% static 'assets/images/team/aaaa.jpg' %}" alt="member img">
+                  <img src="{% static 'assets/images/tuvnom.jpg' %}" alt="member img">
                 </div>
                 <div class="member__info">
                   <h5 class="member__name"><a href="doctors-single-doctor1.html">Kiano Barker</a></h5>

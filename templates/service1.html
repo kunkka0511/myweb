@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Medcity - Medical Healthcare HTML5 Template">
   <link href="assets/images/favicon/favicon.png" rel="icon">
-  <title>Medcity - Medical Healthcare HTML5 Template</title>
+  <title>Монгол хаяг</title>
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
@@ -45,7 +45,7 @@
                       <p>Please feel free to contact our friendly reception staff with any general or medical enquiry.
                       </p>
                       <a href="appointment.html" class="btn btn__secondary btn__link btn__block">
-                        <span>Make Appointment</span> <i class="icon-arrow-right"></i>
+                        <span>Мэдэээлэл харах</span> <i class="icon-arrow-right"></i>
                       </a>
                     </div><!-- /.miniPopup-emergency -->
                   </li>
@@ -87,7 +87,7 @@
           <div class="collapse navbar-collapse" id="mainNavigation">
             <ul class="navbar-nav ml-auto">
               <li class="nav__item">
-                <a href="index" class="nav__item-link">Home</a>
+                <a href="{% url 'index' %}" class="nav__item-link">Home</a>
               </li>
               <li class="nav__item has-dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Бидний тухай</a>
@@ -102,6 +102,7 @@
                     <a href="services-single.html" class="nav__item-link">single Services</a>
                   </li> 
                    <li class="nav__item">
+                    
                     <a href="pricing.html" class="nav__item-link">Pricing & Plans</a>
                   </li>
                   <li class="nav__item">
@@ -152,7 +153,7 @@
        page title 
     =========================== -->
     <section class="page-title page-title-layout2 bg-overlay text-center pb-0">
-      <div class="bg-img"><img src="assets/images/page-titles/3.jpg" alt="background"></div>
+      <div class="bg-img"><img src="{% static 'assets/images/sliders/slide2.jpg' %}" alt="background"></div>
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 offset-xl-2">
@@ -160,10 +161,8 @@
               <i class="icon-microscope"></i>
             </div> -->
             <h1 class="pagetitle__heading">Сүхбаатар дүүрэг</h1>
-            <p class="pagetitle__desc mb-30">Pathology is the study of disease. It is the bridge between science and
-              medicine.
-              It underpins every aspect of patient care, from diagnostic testing and treatment advice to using
-              cutting-edge genetic technologies and preventing disease.
+            <p class="pagetitle__desc mb-30">Улаанбаатар хотын төвд орших тус дүүрэг 21.8 мянган га газар нутагтай, 2010 оны эцсээр 20 хороо, 36,165 өрхтэй, 136,891 хүн амтай байв. 
+              Үүний хамт тус дүүрэгт нийслэлийн төр, засаг, соёл боловсрол, шинжлэх ухааны төв байгууллагууд төвлөрөн үйл ажиллагаа явуулж байдаг онцлогтой.
             </p>
             <a href="#content" class="scroll-down"><i class="fas fa-long-arrow-alt-down"></i></a>
           </div><!-- /.col-xl-8 -->
@@ -176,39 +175,25 @@
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-8">
             <div class="text-block mb-50">
-              <p class="text-block__desc mb-20 font-weight-bold color-secondary">A neurologist is a medical doctor with
-                specialized training
-                in diagnosing, treating, and managing disorders of the brain and nervous system including, but not
-                limited to, Alzheimer’s disease, amyotrophic lateral sclerosis (ALS), concussion, epilepsy, migraine,
-                multiple sclerosis, Parkinson’s disease, and stroke.</p>
-              <div class="video-banner-layout3 bg-overlay mb-50">
-                <img src="assets/images/banners/7.jpg" alt="banner">
-                <a class="video__btn video__btn-white popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
-                  <div class="video__player">
-                    <i class="fa fa-play"></i>
-                  </div>
-                </a>
-              </div><!-- /.video-banner -->
-              <p class="text-block__desc mb-20">These teams are made up of pathologists – who are either doctors with
-                specialist laboratory training or scientists with specialist clinical training – as well as biomedical
-                scientists and support staff. Doctors, nurses, surgeons and other medical staff look to pathologists and
-                consultant clinical scientists for advice on the nature and seriousness of a patient’s illness, making
-                sure they get the most appropriate treatment. We will work with you to develop individualised care
-                plans, including management of chronic diseases.</p>
-              <p class="text-block__desc mb-20">If we cannot assist, we can provide referrals or advice about the type
-                of practitioner you require. We are committed to being the region’s premier healthcare network by
-                providing patient-centered care that inspires clinical and service excellence, making us the first and
-                best choice for our patients, employees, physicians, employers, volunteers and communities.</p>
+             <!-- /.video-banner -->
+              <p class="text-block__desc mb-20">1965 онд  БНМАУ-ын Ардын Их Хурлын Тэргүүлэгчдийн 79 дүгээр тогтоолоор Сүхбаатарын район 
+                анх 44 хороотой байгуулагдахад одоогийн байрнуудаас 
+                I хороонд 61 дүгээр байр, II хороонд 23, 24, 25 байрууд харьяалагдаж байв. 1992 онд шинэ Үндсэн хуулийн дагуу Засаг захиргааны
+                 нэгжийн өөрчлөлтөөр хуучин Сүхбаатарын районы
+                 I хорооны 61 дүгээр байрнаас бусад байр нь Чингэлтэй дүүрэгт орж, 
+               </p>
+              <p class="text-block__desc mb-20">  Сүхбаатарын районы II хорооноос 1, 2, 4, 5, 23, 24, 25, 33 дугаар байруудыг салган одоогийн үндсэн дүр 
+                төрх байдалтайгаар Сүхбаатар дүүргийн I хороо болгон зохион байгуулсан байна.</p>
             </div><!-- /.text-block -->
 
-            <ul class="list-items list-unstyled mb-60 pl-40">
+           <!-- <ul class="list-items list-unstyled mb-60 pl-40">
               <li>If your blood doesn’t clot properly – it’s a haematologist who will conduct the blood tests, confirm
                 if you have haemophilia, and offer treatment.</li>
               <li>When there’s an outbreak of infection in a hospital, it’s a medical microbiologist or infection doctor
                 who will advise the infection control teams and work hard to contain it.</li>
               <li>For those having trouble getting pregnant – it’s a reproductive scientist who will investigate,
                 diagnose and, where possible, treat any infertility issues.</li>
-            </ul>
+            </ul> -->
             <div class="widget-plan mb-60">
               <div class="widget__body">
                 <h5 class="widget__title">дүүргийн онцлох</h5>
@@ -391,27 +376,27 @@
             <div class="row">
               <div class="collg-12 col-md-6">
                 <div class="pricing-widget-layout1 mb-70">
-                  <h5 class="pricing__title">Investigations Price List</h5>
+                  <h5 class="pricing__title">Цэцэрлэг</h5>
                   <ul class="pricing__list list-unstyled mb-0">
-                    <li><span>Umbilical Cord Appearance</span><span class="price">$50</span></li>
-                    <li><span>Cardiac Electrophysiology</span><span class="price">$45</span></li>
-                    <li><span>Repositioning Techniques</span><span class="price">$60</span></li>
-                    <li><span>Geriatric Neurology</span><span class="price">$65</span></li>
-                    <li><span>Nuclear Cardiology</span><span class="price">$40</span></li>
-                    <li><span>Nuclear Cardiology</span><span class="price">$55</span></li>
+                    <li><span>Umbilical Cord Appearance</span><span class="price">50</span></li>
+                    <li><span>Cardiac Electrophysiology</span><span class="price">45</span></li>
+                    <li><span>Repositioning Techniques</span><span class="price">60</span></li>
+                    <li><span>Geriatric Neurology</span><span class="price">65</span></li>
+                    <li><span>Nuclear Cardiology</span><span class="price">40</span></li>
+                    <li><span>Nuclear Cardiology</span><span class="price">55</span></li>
                   </ul>
                 </div>
               </div><!-- /.col-md-6 -->
               <div class="collg-12 col-md-6">
                 <div class="pricing-widget-layout2 mb-70">
-                  <h5 class="pricing__title">Treatments Price List</h5>
+                  <h5 class="pricing__title">Сургууль</h5>
                   <ul class="pricing__list list-unstyled mb-0">
-                    <li><span>Colonoscopy</span><span class="price">$50</span></li>
-                    <li><span>Allergy testing</span><span class="price">$45</span></li>
-                    <li><span>Gastroscopy</span><span class="price">$60</span></li>
-                    <li><span>Bronchoscopy</span><span class="price">$65</span></li>
-                    <li><span>Cardiac Ablation</span><span class="price">$40</span></li>
-                    <li><span>Holter monitoring</span><span class="price">$55</span></li>
+                    <li><span>Colonoscopy</span><span class="price">50</span></li>
+                    <li><span>Allergy testing</span><span class="price">45</span></li>
+                    <li><span>Gastroscopy</span><span class="price">60</span></li>
+                    <li><span>Bronchoscopy</span><span class="price">65</span></li>
+                    <li><span>Cardiac Ablation</span><span class="price">40</span></li>
+                    <li><span>Holter monitoring</span><span class="price">55</span></li>
                   </ul>
                 </div>
               </div><!-- /.col-md-6 -->
@@ -421,7 +406,7 @@
              ========================= -->
             <section class="team-layout2 pt-0 pb-30">
               <div class="heading mb-40">
-                <h3 class="heading__title">Meet Our Doctors</h3>
+                <h3 class="heading__title">онцлох байгууллага</h3>
                 <p class="heading__desc">Our administration and support staff all have exceptional people skills and
                   trained to assist you with all medical enquiries.
                 </p>
@@ -434,8 +419,8 @@
                     <img src="assets/images/team/1.jpg" alt="member img">
                   </div><!-- /.member-img -->
                   <div class="member__info">
-                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Mike Dooley</a></h5>
-                    <p class="member__job">Cardiology Specialist</p>
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">GOBI</a></h5>
+                    <p class="member__job">cashmere</p>
                   </div><!-- /.member-info -->
                 </div><!-- /.member -->
                 <!-- Member #2 -->
@@ -444,8 +429,8 @@
                     <img src="assets/images/team/2.jpg" alt="member img">
                   </div><!-- /.member-img -->
                   <div class="member__info">
-                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Dermatologists</a></h5>
-                    <p class="member__job">Cardiology Specialist</p>
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Nomin</a></h5>
+                    <p class="member__job">holding</p>
                   </div><!-- /.member-info -->
                 </div><!-- /.member -->
                 <!-- Member #3 -->
@@ -454,8 +439,8 @@
                     <img src="assets/images/team/3.jpg" alt="member img">
                   </div><!-- /.member-img -->
                   <div class="member__info">
-                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Maria Andaloro</a></h5>
-                    <p class="member__job">Pediatrician</p>
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Apu</a></h5>
+                    <p class="member__job">trade</p>
                   </div><!-- /.member-info -->
                 </div><!-- /.member -->
                 <!-- Member #4 -->
@@ -464,7 +449,7 @@
                     <img src="assets/images/team/4.jpg" alt="member img">
                   </div><!-- /.member-img -->
                   <div class="member__info">
-                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Dupree Black</a></h5>
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Зэрэг байгууллага</a></h5>
                     <p class="member__job">Urologist</p>
                   </div><!-- /.member-info -->
                 </div><!-- /.member -->
@@ -474,7 +459,7 @@
                     <img src="assets/images/team/5.jpg" alt="member img">
                   </div><!-- /.member-img -->
                   <div class="member__info">
-                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Markus skar</a></h5>
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html"> Зэрэг байгууллага</a></h5>
                     <p class="member__job">Laboratory</p>
                   </div><!-- /.member-info -->
                 </div><!-- /.member -->
@@ -484,7 +469,7 @@
                     <img src="assets/images/team/6.jpg" alt="member img">
                   </div><!-- /.member-img -->
                   <div class="member__info">
-                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Kiano Barker</a></h5>
+                    <h5 class="member__name"><a href="doctors-single-doctor1.html">Зэрэг байгууллага</a></h5>
                     <p class="member__job">Pathologist </p>
                   </div><!-- /.member-info -->
                 </div><!-- /.member -->
@@ -556,12 +541,10 @@
             <div class="col-sm-12 col-md-12 col-lg-3">
               <div class="footer-widget-about">
                 <img src="assets/images/logo/logo-light.png" alt="logo" class="mb-30">
-                <p class="color-gray">Our goal is to deliver quality of care in a courteous, respectful, and
-                  compassionate manner. We hope you will allow us to care for you and strive to be the first and best
-                  choice for your family healthcare.
+                <p class="color-gray">Сүхбаатар дүүргийн Засаг даргын Тамгын газар Монгол Улс, Улаанбаатар хот-14192, Сүхбаатар дүүргийн 7-р хороо Денверийн гудамж, Иргэдэд үйлчлэх төв байр
                 </p>
                 <a href="appointment.html" class="btn btn__primary btn__primary-style2 btn__link">
-                  <span>Make Appointment</span> <i class="icon-arrow-right"></i>
+                  <span>Сайтаар харах</span> <i class="icon-arrow-right"></i>
                 </a>
               </div><!-- /.footer-widget__content -->
             </div><!-- /.col-xl-2 -->
@@ -596,15 +579,22 @@
             </div><!-- /.col-lg-2 -->
             <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="footer-widget-contact">
-                <h6 class="footer-widget__title color-heading">Quick Contacts</h6>
+                <h6 class="footer-widget__title color-heading">ХОЛБОО БАРИХ</h6>
                 <ul class="contact-list list-unstyled">
                   <li>If you have any questions or need help, feel free to contact with our team.</li>
                   <li>
-                    <a href="tel:01061245741" class="phone__number">
-                      <i class="icon-phone"></i> <span>01061245741</span>
+                    <a href="Утас:70070109" class="phone__number">
+                      <i class="icon-phone"></i> <span>Утас:70070109</span>
+                    </a>
+                    <a href="Факс:976-70070113" class="phone__number">
+                      <i class="icon-phone"></i> <span>Факс:976-70070113</span>
                     </a>
                   </li>
-                  <li class="color-body">2307 Beverley Rd Brooklyn, New York 11226 United States.</li>
+                  <a href="И-Мэйл:info@sbd.gov.mn
+                  " class="phone__number">
+                    <i class="icon-email"></i> <span>ИМэйл:info@sbd.gov.mn
+                    </span>
+                  </a>
                 </ul>
                 <div class="d-flex align-items-center">
                   <a href="contact-us.html" class="btn btn__primary btn__link mr-30">

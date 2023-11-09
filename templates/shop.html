@@ -87,7 +87,7 @@
           <div class="collapse navbar-collapse" id="mainNavigation">
             <ul class="navbar-nav ml-auto">
               <li class="nav__item">
-                <a href="index" class="nav__item-link">Home</a>
+                <a href="{% url 'index' %}" class="nav__item-link">Home</a>
               </li>
               <li class="nav__item has-dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Бидний тухай</a>
@@ -214,15 +214,15 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
                     <div class="product__action">
-                      <a href="#" class="btn btn__primary btn__rounded">
+                      <a href="{% url 'service1'%}" class="btn btn__primary btn__rounded">
                         <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
                       </a>
                     </div><!-- /.product-action -->
                   </div><!-- /.product-img -->
                   <div class="product__info">
-                    <h4 class="product__title"><a href="#">Сүхбаатар</a></h4>
+                    <h4 class="product__title"><a href="{% url 'service1'%}">Сүхбаатар</a></h4>
                     <span class="product__price">Дүүрэг</span>
                   </div><!-- /.product-content -->
                 </div><!-- /.product-item -->
@@ -231,7 +231,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
                         <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
@@ -248,7 +248,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
                         <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
@@ -265,7 +265,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
                         <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
@@ -282,7 +282,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
                         <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
@@ -299,7 +299,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
                         <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
@@ -316,7 +316,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
                         <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
@@ -333,7 +333,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
                         <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
@@ -350,7 +350,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="product-item">
                   <div class="product__img">
-                    <img src="{% static 'assets/images/products/1.jpg' %}" alt="Product" loading="lazy">
+                    <img src="{% static 'assets/images/office.png' %}" alt="Product" loading="lazy">
                     <div class="product__action">
                       <a href="#" class="btn btn__primary btn__rounded">
                         <i class="icon-arrow-right"></i> <span>Дэлгэрэнгүй</span>
@@ -426,17 +426,17 @@
                 <h5 class="widget__title"></h5>
                 <div class="widget-content">
                   <ul class="list-unstyled mb-0">
-                    <li><a href="#"><span class="cat-count">4</span><span>Neurology</span></a></li>
-                    <li><a href="#"><span class="cat-count">0</span><span>Cardiology</span></a></li>
-                    <li><a href="#"><span class="cat-count">3</span><span>Pathology</span></a></li>
-                    <li><a href="#"><span class="cat-count">2</span><span>Laboratory</span></a></li>
-                    <li><a href="#"><span class="cat-count">4</span><span>Pediatric</span></a></li>
-                    <li><a href="#"><span class="cat-count">1</span><span>Cardiac Clinic</span></a></li>
+                    <li><a href="#"><span class="cat-count">1-р</span><span>хороо</span></a></li>
+                    <li><a href="#"><span class="cat-count">2-р</span><span>хороо</span></a></li>
+                    <li><a href="#"><span class="cat-count">3-р</span><span>хороо</span></a></li>
+                    <li><a href="#"><span class="cat-count">4-р</span><span>хороо</span></a></li>
+                    <li><a href="#"><span class="cat-count">5-р</span><span>хороо</span></a></li>
+                    <li><a href="#"><span class="cat-count">6-р</span><span>хороо</span></a></li>
                   </ul>
                 </div><!-- /.widget-content -->
               </div><!-- /.widget-categories -->
-              <div class="widget widget-filter">
-                <h5 class="widget__title">Pricing Filter</h5>
+             <div class="widget widget-filter">
+               <!----> <h5 class="widget__title">Pricing Filter</h5>
                 <div class="widget__content">
                   <div id="rangeSlider"></div>
                   <div class="d-flex justify-content-between align-items-center">
@@ -476,9 +476,7 @@
             <div class="col-sm-12 col-md-12 col-lg-3">
               <div class="footer-widget-about">
                 <img src="assets/images/logo/logo-light.png" alt="logo" class="mb-30">
-                <p class="color-gray">Our goal is to deliver quality of care in a courteous, respectful, and
-                  compassionate manner. We hope you will allow us to care for you and strive to be the first and best
-                  choice for your family healthcare.
+                <p class="color-gray">Сүхбаатар дүүргийн Засаг даргын Тамгын газар Монгол Улс, Улаанбаатар хот-14192, Сүхбаатар дүүргийн 7-р хороо Денверийн гудамж, Иргэдэд үйлчлэх төв байр
                 </p>
                 <a href="appointment.html" class="btn btn__primary btn__primary-style2 btn__link">
                   <span>Make Appointment</span> <i class="icon-arrow-right"></i>
