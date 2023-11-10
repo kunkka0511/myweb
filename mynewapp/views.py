@@ -26,3 +26,7 @@ def blog(request):
     return render(request, 'blog.html')
 def shop(request):
     return render(request, 'shop.html')
+def login(request):
+    return render(request, 'login.html')
+def signup(request):
+    return render(request, 'signup')
