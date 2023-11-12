@@ -154,8 +154,36 @@
             Google Map
     =========================  -->
     <section class="google-map py-0">
+      <title>Places Search Box</title>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  
+      <link rel="stylesheet" type="text/css" href="./style.css" />
+      <script type="module" src="./index.js"></script>
+    </head>
+    <body>
+      <input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Search Box"
+      />
+      <div id="map"></div>
+  
+      <!-- 
+        The `defer` attribute causes the callback to execute after the full HTML
+        document has been parsed. For non-blocking uses, avoiding race conditions,
+        and consistent behavior across browsers, consider loading using Promises.
+        See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+        for more information.
+        -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly"
+        defer
+      ></script>
+    </body>
       <iframe frameborder="0" height="500" width="100%"
-        src="https://maps.google.com/maps?q=Suite%20100%20San%20Francisco%2C%20LA%2094107%20United%20States&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"></iframe>
+
+        src="https://maps.google.com/maps?q=Mongolian%20Ulaanbaatar&amp;t=&amp;z=9&amp;ie=UTF8&amp;iwloc=&amp;output=embed "> </iframe><style>.mapouter{position:relative;height:400px;width:450px;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}</style><a href="https://blooketjoin.org">blooket join</a><style>.gmap_canvas{overflow:hidden;height:400px;width:450px}.gmap_canvas iframe{position:relative;z-index:2}</style></div></div>
     </section><!-- /.GoogleMap -->
 
     <!-- ==========================
@@ -163,30 +191,7 @@
     =========================== -->
     <div class="welcome-hero-serch-box">
       <div class="welcome-hero-form">
-        <div class="single-welcome-hero-form">
-          <h4>what?</h4>
-          <form action="index.html">
-            <input type="text" placeholder="Ex: palce, resturent, food, automobile" />
-          </form>
-          <div class="welcome-hero-form-icon">
-            <i class="flaticon-list-with-dots"></i>
-          </div>
-        </div>
-        <div class="single-welcome-hero-form">
-          <h4>location</h4>
-          <form action="index.html">
-            <input type="text" placeholder="Ex: london, newyork, rome" />
-          </form>
-          <div class="welcome-hero-form-icon">
-            <i class="flaticon-gps-fixed-indicator"></i>
-          </div>
-        </div>
-      </div>
-      <div class="welcome-hero-serch">
-        <button class="welcome-hero-btn" onclick="window.location.href='#'">
-           search  <i data-feather="search"></i> 
-        </button>
-      </div>
+       
     </div><!-- /.contact layout 1 -->
 
     <!-- ========================= 
@@ -400,6 +405,7 @@
   <script src="{% static 'assets/js/jquery-3.5.1.min.js' %}"></script>
   <script src="{% static 'assets/js/plugins.js' %}"></script>
   <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="{% static 'assets/js/map.js' %}"></script>
 </body>
 
 </html>
