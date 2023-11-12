@@ -30,3 +30,5 @@ def login(request):
     return render(request, 'login.html')
 def signup(request):
     return render(request, 'signup')
+def horoo(request):
+    return render(request, 'horoo.html')
